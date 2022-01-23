@@ -85,7 +85,7 @@ namespace TimeOut_Reset.ViewModels
             {
                 for (int i = 0; i < 1000; i++)
                 {
-                    ewh.Set();
+                    //ewh.Set();
                     Text = $"{i}";
                 }
             }
@@ -95,8 +95,8 @@ namespace TimeOut_Reset.ViewModels
         {
             if (!ewh.WaitOne(3000))
             {
-                MessageBox.Show("타임아웃!!");
                 Stop();
+                MessageBox.Show("타임아웃!!");
             }
         }
 
