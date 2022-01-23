@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{0AC9C27B-9110-44F1-B588-404D66376692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeOut_Reset", "TimeOut_Reset\TimeOut_Reset.csproj", "{1FC11AC6-572E-4019-8295-1CD1EAC8127C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AC9C27B-9110-44F1-B588-404D66376692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC9C27B-9110-44F1-B588-404D66376692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC9C27B-9110-44F1-B588-404D66376692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC9C27B-9110-44F1-B588-404D66376692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC11AC6-572E-4019-8295-1CD1EAC8127C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC11AC6-572E-4019-8295-1CD1EAC8127C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC11AC6-572E-4019-8295-1CD1EAC8127C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC11AC6-572E-4019-8295-1CD1EAC8127C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11DDDA92-0771-4A6A-9FC8-038A97BE998C}
+	EndGlobalSection
+EndGlobal
