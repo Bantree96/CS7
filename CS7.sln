@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeOut_Reset", "TimeOut_Reset\TimeOut_Reset.csproj", "{1FC11AC6-572E-4019-8295-1CD1EAC8127C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitmap_Zoom", "Bitmap_Zoom\Bitmap_Zoom.csproj", "{07DF7055-88C2-4E60-AAC2-140E88CCE850}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1FC11AC6-572E-4019-8295-1CD1EAC8127C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FC11AC6-572E-4019-8295-1CD1EAC8127C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FC11AC6-572E-4019-8295-1CD1EAC8127C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07DF7055-88C2-4E60-AAC2-140E88CCE850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DF7055-88C2-4E60-AAC2-140E88CCE850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DF7055-88C2-4E60-AAC2-140E88CCE850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DF7055-88C2-4E60-AAC2-140E88CCE850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

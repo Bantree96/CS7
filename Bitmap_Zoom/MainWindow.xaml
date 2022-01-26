@@ -1,0 +1,27 @@
+﻿<Window x:Class="Bitmap_Zoom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bitmap_Zoom"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Canvas>
+                <Image Width="{Binding TopImage_Width}" Height="{Binding TopImage_Height}" Source="{Binding TopImage}" Visibility="Visible"/>
+            </Canvas>
+            
+            <Image Source="{Binding MainImage}"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <CheckBox Content="확대" IsChecked="{Binding IsZoom}" Checked="CheckBox_Checked"></CheckBox>
+        </Grid>
+    </Grid>
+</Window>
