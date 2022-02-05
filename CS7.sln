@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeOut_Reset", "TimeOut_Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitmap_Zoom", "Bitmap_Zoom\Bitmap_Zoom.csproj", "{07DF7055-88C2-4E60-AAC2-140E88CCE850}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPool_Study", "ThreadPool\ThreadPool_Study.csproj", "{18E6C559-2F75-4CF0-B4AD-D1A5F6D00067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection_Study", "Reflection_Study\Reflection_Study.csproj", "{1E21B94B-8291-4EDB-86D3-6128F8222309}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{07DF7055-88C2-4E60-AAC2-140E88CCE850}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07DF7055-88C2-4E60-AAC2-140E88CCE850}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07DF7055-88C2-4E60-AAC2-140E88CCE850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E6C559-2F75-4CF0-B4AD-D1A5F6D00067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E6C559-2F75-4CF0-B4AD-D1A5F6D00067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E6C559-2F75-4CF0-B4AD-D1A5F6D00067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E6C559-2F75-4CF0-B4AD-D1A5F6D00067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E21B94B-8291-4EDB-86D3-6128F8222309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E21B94B-8291-4EDB-86D3-6128F8222309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E21B94B-8291-4EDB-86D3-6128F8222309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E21B94B-8291-4EDB-86D3-6128F8222309}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
