@@ -49,24 +49,42 @@ namespace Bitmap_Zoom.ViewModels
         }
         #endregion
 
-        #region Method
+        #region Button Method
         public void Zoom()
         {
             if(IsZoom)
             {
-                double ZoomUpImage_width = 1000 * (ZoomPercent / 100);
-                double ZoomUpImage_height = 1000 * (ZoomPercent / 100);
-                Bitmap cropBitmap;
+                // Top
+
+                // 확대될 이미지 사이즈
+                double ZoomTopImage_width = 1000 * (ZoomPercent / 100);
+                double ZoomTopImage_height = 1000 * (ZoomPercent / 100);
+                
+                Bitmap cropBitmap = new Bitmap(_bitmap);
+                // 자를 Bitmap에서 좌표를 구해 그 부분에 새 Bitmap을 만듬
+                cropBitmap = cropBitmap.Clone(new Rectangle(50 - (100 / 2), 0 + 150, 150, 150),System.Drawing.Imaging.PixelFormat.DontCare);
+
+                // 이미지의 사이즈를 키웠기 때문에 
+                TopImage_Width = 200;
+                TopImage_Height = 200;
+                TopImage = _converter.BitmapToBitmapImage(cropBitmap);
+
+
+                // Bottom
+                double ZoomBottomImage_width = 1000 * (ZoomPercent / 100);
+                double ZoomBottomImage_height = 1000 * (ZoomPercent / 100);
 
                 cropBitmap = new Bitmap(_bitmap);
                 // Rectangle은 그릴 좌표를 잡아주는것.
-                cropBitmap = cropBitmap.Clone(new Rectangle(50 - (100 / 2), 0 + 150, 150, 150),System.Drawing.Imaging.PixelFormat.DontCare);
+                cropBitmap = cropBitmap.Clone(new Rectangle(50 - (100 / 2), 0 + 150, 150, 150), System.Drawing.Imaging.PixelFormat.DontCare);
 
                 TopImage_Width = 200;
                 TopImage_Height = 200;
                 TopImage = _converter.BitmapToBitmapImage(cropBitmap);
             }
         }
+
+
         #endregion
     }
 }
