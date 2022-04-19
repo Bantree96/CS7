@@ -1,28 +1,26 @@
 ﻿// Json을 사용하기위한 라이브러리 using
+using Json_Use.Models.DFS;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Threading;
+using System.Timers;
 
 namespace Json_Use.Models
 {
     public class DFS_JsonControll
     {
         #region Field
-        Status_Json status_data = new Status_Json();
+        DFS_Status status_data = new DFS_Status();
+        private Timer statusTimer;
 
         #endregion
         public DFS_JsonControll()
         {
-            Timer timer = new Timer(CreateStateJson, null, 0, 10000);
-
             // TODO : 1. 10초마다 Status JSON 생성 후 저장
-            // 10초니까 타이머로 처리하면 될듯
+            SetTimer();
         }
 
-        private void CreateStateJson(object state)
+        private void CreateStateJson()
         {
             JObject status = new JObject(
                 new JProperty("TXN_ID", status_data.Id),
@@ -42,6 +40,19 @@ namespace Json_Use.Models
         public void CreateJsonFile()
         {
                
+        }
+
+        public void SetTimer()
+        {
+            statusTimer = new System.Timers.Timer(10000);
+            statusTimer.Elapsed += OnTimedEvent;
+            statusTimer.AutoReset = true;
+            statusTimer.Enabled = true;
+        }
+
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            CreateStateJson();
         }
 
         /*
@@ -64,18 +75,5 @@ namespace Json_Use.Models
 
         }
         #endregion
-    }
-
-    public class Status_Json
-    {
-        public int Id { get; set; } = 1;
-        public string Name { get; set; } = "Alex";
-        public int status { get; set; } = 1;
-        public List<string> refDS { get; set; }
-    }
-
-    public class Data_Json
-    {
-
     }
 }
