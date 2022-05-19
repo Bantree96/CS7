@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservableCollection_Study"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json_Use", "Json_Use\Json_Use.csproj", "{CF11E45A-3925-4923-AD35-D92A5583E715}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog_Test", "Serliog_Test\Serilog_Test.csproj", "{EF1C39B4-D14B-4533-BB4B-96F630703C1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,14 @@ Global
 		{CF11E45A-3925-4923-AD35-D92A5583E715}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF11E45A-3925-4923-AD35-D92A5583E715}.Release|x64.ActiveCfg = Release|Any CPU
 		{CF11E45A-3925-4923-AD35-D92A5583E715}.Release|x64.Build.0 = Release|Any CPU
+		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Debug|x64.Build.0 = Debug|Any CPU
+		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Release|x64.ActiveCfg = Release|Any CPU
+		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
