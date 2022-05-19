@@ -63,15 +63,15 @@ namespace Json_Use.Models
         {
             // Json string 만들기
             //var p = new State_Json { Id = 1, Name = "Alex" };
-            var p = new DFS_Status();
+            object p = new DFS_Status();
             string jsonString = JsonConvert.SerializeObject(p);
             //Console.WriteLine(jsonString);
 
             File.WriteAllText(@"D:\test.json", jsonString);
 
             // Json string으로부터 Object 가져오기
-            //State_Json pObj = JsonConvert.DeserializeObject<State_Json>(jsonString);
-            //Console.WriteLine(pObj.Name);
+            p = JsonConvert.DeserializeObject<object>(File.ReadAllText(@"D:\test.json"));
+            Console.WriteLine(p);
         }
         
         public void CreateDataJson()
