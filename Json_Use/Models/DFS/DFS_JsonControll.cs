@@ -1,5 +1,6 @@
 ﻿// Json을 사용하기위한 라이브러리 using
 using Json_Use.Models.DFS;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
@@ -19,7 +20,7 @@ namespace Json_Use.Models
             // TODO : 1. 10초마다 Status JSON 생성 후 저장
             SetTimer();
         }
-
+        /*
         private void CreateStateJson()
         {
             JObject status = new JObject(
@@ -35,7 +36,7 @@ namespace Json_Use.Models
 
             // TODO : 2. 저장 기능 필요
             File.WriteAllText(@"D:\test.json", status.ToString());
-        }
+        }*/
         #region Method
         public void CreateJsonFile()
         {
@@ -55,25 +56,29 @@ namespace Json_Use.Models
             CreateStateJson();
         }
 
-        /*
         
-        // 일반 Json 방식
+        
+        // Json Serialize, Deserialize 방식
         public void CreateStateJson()
         {
             // Json string 만들기
-            var p = new State_Json { Id = 1, Name = "Alex" };
+            //var p = new State_Json { Id = 1, Name = "Alex" };
+            var p = new DFS_Status();
             string jsonString = JsonConvert.SerializeObject(p);
-            Console.WriteLine(jsonString);
+            //Console.WriteLine(jsonString);
+
+            File.WriteAllText(@"D:\test.json", jsonString);
 
             // Json string으로부터 Object 가져오기
-            State_Json pObj = JsonConvert.DeserializeObject<State_Json>(jsonString);
-            Console.WriteLine(pObj.Name);
+            //State_Json pObj = JsonConvert.DeserializeObject<State_Json>(jsonString);
+            //Console.WriteLine(pObj.Name);
         }
-        */
+        
         public void CreateDataJson()
         {
 
         }
         #endregion
+
     }
 }

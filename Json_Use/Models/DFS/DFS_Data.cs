@@ -6,16 +6,31 @@ using System.Threading.Tasks;
 
 namespace Json_Use.Models.DFS
 {
-    class DFS_Data
+    public class DFS_Data
     {
         public string TXN_ID { get; set; }
         public string inDTName { get; set; }
         public string outDTName { get; set; }
         public string actID { get; set; }
-        public List<IN_DATA> IN_DATAs { get; set; }
+        public List<IN_DATA1> IN_DATAs { get; set; } = new List<IN_DATA1>();
+
+ 
     }
 
-    class IN_DATA
+   
+    public class IN_DATA1
+    {
+        public List<IN_DATA2> IN_DATA { get; set; } = new List<IN_DATA2>();
+
+        public IN_DATA1()
+        {
+            IN_DATA2 in_data2 = new IN_DATA2();
+            IN_DATA.Add(in_data2);
+
+        }
+    }
+
+    public class IN_DATA2
     {
         public string CATEGORY { get; set; }
         public DateTime VISION_INPUT_TIME { get; set; }
@@ -38,13 +53,18 @@ namespace Json_Use.Models.DFS
         public int CELL_COUNT_NO { get; set; }
         public string VIRTUAL_CELL_ID { get; set; }
         public string CELL_FINAL_JUDGE { get; set; }
-        public List<IQ_INFO> IQ_INFOs { get; set; }
+        public List<IQ_INFO> IQ_INFOs { get; set; } = new List<IQ_INFO>();
         public string APPEARANCE_JUDGE_RESULT { get; set; }
         public int TOTAL_APPEARANCE_NG_COUNT { get; set; }
         public string[] APPEARANCE_REASON_ALL { get; set; }
-    }
 
-    class IQ_INFO
+        public IN_DATA2()
+        {
+            IQ_INFO in_data = new IQ_INFO();
+            IQ_INFOs.Add(in_data);
+        }
+    }
+    public class IQ_INFO
     {
         public string IQ_CAMERA_LOCATION { get; set; }
         public int IQ_CAMERA_NUMBER { get; set; }
@@ -63,7 +83,7 @@ namespace Json_Use.Models.DFS
         public string IMAGE_FILE_NAME { get; set; }
     }
 
-    class DEFECT_INFO
+    public class DEFECT_INFO
     {
         public int DEFECT_INDEX { get; set; }
         public string DEFECT_LD_CLASS { get; set; }
