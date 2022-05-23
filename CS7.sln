@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json_Use", "Json_Use\Json_U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog_Test", "Serliog_Test\Serilog_Test.csproj", "{EF1C39B4-D14B-4533-BB4B-96F630703C1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Converter_Study", "Converter_Study\Converter_Study.csproj", "{38E1B573-6F2C-4F67-A038-C82E038C6991}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,14 @@ Global
 		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Release|x64.ActiveCfg = Release|Any CPU
 		{EF1C39B4-D14B-4533-BB4B-96F630703C1E}.Release|x64.Build.0 = Release|Any CPU
+		{38E1B573-6F2C-4F67-A038-C82E038C6991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E1B573-6F2C-4F67-A038-C82E038C6991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E1B573-6F2C-4F67-A038-C82E038C6991}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{38E1B573-6F2C-4F67-A038-C82E038C6991}.Debug|x64.Build.0 = Debug|Any CPU
+		{38E1B573-6F2C-4F67-A038-C82E038C6991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E1B573-6F2C-4F67-A038-C82E038C6991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E1B573-6F2C-4F67-A038-C82E038C6991}.Release|x64.ActiveCfg = Release|Any CPU
+		{38E1B573-6F2C-4F67-A038-C82E038C6991}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
