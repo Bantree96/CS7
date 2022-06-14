@@ -35,14 +35,7 @@ namespace Bitmap_Draw
             // 로컬 이미지 가져오기 
             MyBitmap = new Bitmap("D://hello.bmp");
 
-            /*
-            using (Graphics g = Graphics.FromImage(MyBitmap))
-            {
-                g.DrawRectangle(redPen, new Rectangle(MyBitmap.Width / 2, MyBitmap.Height / 2, 100, 100));
-                g.DrawImage(MyBitmap, 0, 0);
-               
-            }*/
-
+            // 이미지를 따로 가져감
             RenderTargetBitmap rtb = new RenderTargetBitmap(MyBitmap.Width, MyBitmap.Height, 96d, 96d, PixelFormats.Pbgra32);
             DrawingVisual dv = new DrawingVisual();
             using (DrawingContext dc = dv.RenderOpen())
@@ -59,6 +52,22 @@ namespace Bitmap_Draw
 
             // 이미지 바인딩 출력
             DisplayImage = BitmapToBitmapImage(MyBitmap.Clone() as Bitmap);
+
+            // 이미지 합성 
+            /*
+            Bitmap bitmap = new Bitmap(_grabImage.Width, _grabImage.Height);
+
+            Pen redPen = new Pen(System.Drawing.Brushes.Red, 10);
+            using (Graphics g = Graphics.FromImage(bitmap))
+            {
+                g.DrawImage(_grabImage, 0, 0, _grabImage.Width, _grabImage.Height);
+                g.DrawRectangle(redPen, new Rectangle(_grabImage.Width / 2, _grabImage.Height / 2, 100, 100));
+            }
+            bitmap.Save("D://hello.bmp");
+            LabelImage = BitmapToBitmapImage(bitmap.Clone() as Bitmap);
+            redPen.Dispose();
+            bitmap.Dispose();
+             */
 
         }
 
