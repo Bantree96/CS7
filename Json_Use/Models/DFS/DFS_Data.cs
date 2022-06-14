@@ -5,26 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Json_Use.Models.DFS
-{
-    public class DFS_Data
-    {
-        public string TXN_ID { get; set; }
-        public string inDTName { get; set; }
-        public string outDTName { get; set; }
-        public string actID { get; set; }
-        public List<IN_DATA1> IN_DATAs { get; set; } = new List<IN_DATA1>();
-
- 
-    }
-
-   
-    public class IN_DATA1
+{ 
+    /// <summary>
+    /// IN_DATA 배열 생성
+    /// </summary>
+    public class IN_DATA_Class
     {
         public List<IN_DATA2> IN_DATA { get; set; } = new List<IN_DATA2>();
 
-        public IN_DATA1()
+        public IN_DATA_Class()
         {
+            // IN_DATA 실제 내용입력
             IN_DATA2 in_data2 = new IN_DATA2();
+            IN_DATA.Add(in_data2);
             IN_DATA.Add(in_data2);
 
         }

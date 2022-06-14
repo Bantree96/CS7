@@ -8,12 +8,12 @@ namespace Json_Use.Models.DFS
         public int Id { get; set; } = 1;
         public string Name { get; set; } = "Alex";
         public int status { get; set; } = 1;
-        public IN_DATA1 refDS { get; set; }
+        public IN_DATA_Class refDS { get; set; }
 
         public DFS_Status()
         {
-            //var jsonString = JsonConvert.SerializeObject(a, Formatting.Indented);
-            IN_DATA1 in_data = new IN_DATA1();
+            // DFS_Status Property 생성된 다음 IN_DATA1이 생성
+            IN_DATA_Class in_data = new IN_DATA_Class();
             refDS = in_data;
         }
     }

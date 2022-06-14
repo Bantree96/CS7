@@ -11,7 +11,6 @@ namespace Json_Use.Models
     public class DFS_JsonControll
     {
         #region Field
-        DFS_Status status_data = new DFS_Status();
         private Timer statusTimer;
 
         #endregion
@@ -20,6 +19,7 @@ namespace Json_Use.Models
             // TODO : 1. 10초마다 Status JSON 생성 후 저장
             SetTimer();
         }
+
         /*
         private void CreateStateJson()
         {
@@ -37,12 +37,8 @@ namespace Json_Use.Models
             // TODO : 2. 저장 기능 필요
             File.WriteAllText(@"D:\test.json", status.ToString());
         }*/
-        #region Method
-        public void CreateJsonFile()
-        {
-               
-        }
 
+        #region Method
         public void SetTimer()
         {
             statusTimer = new System.Timers.Timer(10000);
@@ -55,14 +51,11 @@ namespace Json_Use.Models
         {
             CreateStateJson();
         }
-
-        
         
         // Json Serialize, Deserialize 방식
         public void CreateStateJson()
         {
             // Json string 만들기
-            //var p = new State_Json { Id = 1, Name = "Alex" };
             object p = new DFS_Status();
             string jsonString = JsonConvert.SerializeObject(p);
             //Console.WriteLine(jsonString);
@@ -73,11 +66,7 @@ namespace Json_Use.Models
             p = JsonConvert.DeserializeObject<object>(File.ReadAllText(@"D:\test.json"));
             Console.WriteLine(p);
         }
-        
-        public void CreateDataJson()
-        {
 
-        }
         #endregion
 
     }
