@@ -35,12 +35,16 @@ namespace Bitmap_Draw
             // 로컬 이미지 가져오기 
             MyBitmap = new Bitmap("D://hello.bmp");
 
-            // 이미지를 따로 가져감
+            // 이미지의 사이즈만큼 새 이미지를 만듬
             RenderTargetBitmap rtb = new RenderTargetBitmap(MyBitmap.Width, MyBitmap.Height, 96d, 96d, PixelFormats.Pbgra32);
             DrawingVisual dv = new DrawingVisual();
+
+            // 빨간펜
+            System.Windows.Media.Pen pen = new System.Windows.Media.Pen(System.Windows.Media.Brushes.Red, 10);
+
             using (DrawingContext dc = dv.RenderOpen())
             {
-                dc.DrawRoundedRectangle(System.Windows.Media.Brushes.Transparent, new System.Windows.Media.Pen(System.Windows.Media.Brushes.Red,10), new System.Windows.Rect(100, 100, 100, 100), 0, 0);
+                dc.DrawRoundedRectangle(System.Windows.Media.Brushes.Transparent, pen, new System.Windows.Rect(100, 100, 100, 100), 0, 0);
                 dc.Close();
                 rtb.Render(dv);
                 if (rtb.IsFrozen)
@@ -49,26 +53,33 @@ namespace Bitmap_Draw
 
             SourceImage = rtb;
 
-
             // 이미지 바인딩 출력
             DisplayImage = BitmapToBitmapImage(MyBitmap.Clone() as Bitmap);
+             
 
-            // 이미지 합성 
+
+            // 이미지 합성
+            
             /*
-            Bitmap bitmap = new Bitmap(_grabImage.Width, _grabImage.Height);
+            // Bitmap 생성
+            Bitmap bitmap = new Bitmap(MyBitmap.Width, MyBitmap.Height);
 
-            Pen redPen = new Pen(System.Drawing.Brushes.Red, 10);
+            // 펜 생성
+            System.Drawing.Pen redPen = new System.Drawing.Pen(System.Drawing.Brushes.Red, 10);
             using (Graphics g = Graphics.FromImage(bitmap))
             {
-                g.DrawImage(_grabImage, 0, 0, _grabImage.Width, _grabImage.Height);
-                g.DrawRectangle(redPen, new Rectangle(_grabImage.Width / 2, _grabImage.Height / 2, 100, 100));
+                // 이미지 그리기
+                g.DrawImage(MyBitmap, 0, 0, MyBitmap.Width, MyBitmap.Height);
+                // 도형 그리기
+                g.DrawRectangle(redPen, new Rectangle(MyBitmap.Width / 2, MyBitmap.Height / 2, 100, 100));
             }
-            bitmap.Save("D://hello.bmp");
-            LabelImage = BitmapToBitmapImage(bitmap.Clone() as Bitmap);
+            // 바인딩
+            DisplayImage = BitmapToBitmapImage(bitmap.Clone() as Bitmap);
+
+            // Dispose
             redPen.Dispose();
             bitmap.Dispose();
-             */
-
+            */
         }
 
         /// <summary>
