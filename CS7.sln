@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitmap_Draw", "Bitmap_Draw\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Double_Round", "Double_Round\Double_Round.csproj", "{931B15DA-C957-45A4-BF00-9F175AC3FDB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumDescription", "EnumDescription\EnumDescription.csproj", "{49D6CFA1-C237-4B14-9206-9CC35F71C08E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +163,14 @@ Global
 		{931B15DA-C957-45A4-BF00-9F175AC3FDB4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{931B15DA-C957-45A4-BF00-9F175AC3FDB4}.Release|x64.ActiveCfg = Release|Any CPU
 		{931B15DA-C957-45A4-BF00-9F175AC3FDB4}.Release|x64.Build.0 = Release|Any CPU
+		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Debug|x64.Build.0 = Debug|Any CPU
+		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Release|x64.ActiveCfg = Release|Any CPU
+		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
