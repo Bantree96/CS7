@@ -11,13 +11,13 @@ namespace Json_Use.Models.DFS
     /// </summary>
     public class IN_DATA_Class
     {
-        public List<IN_DATA2> IN_DATA { get; set; } = new List<IN_DATA2>();
+        public List<IN_DATA2> IN_DATA { get; set; } 
 
         public IN_DATA_Class()
         {
+            IN_DATA = new List<IN_DATA2>();
             // IN_DATA 실제 내용입력
             IN_DATA2 in_data2 = new IN_DATA2();
-            IN_DATA.Add(in_data2);
             IN_DATA.Add(in_data2);
 
         }

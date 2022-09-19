@@ -5,9 +5,9 @@ namespace Json_Use.Models.DFS
 {
     public class DFS_Status
     {
-        public int Id { get; set; } = 1;
-        public string Name { get; set; } = "Alex";
-        public int status { get; set; } = 1;
+        public int Id { get; set; } 
+        public string Name { get; set; } 
+        public int status { get; set; }
         public IN_DATA_Class refDS { get; set; }
 
         public DFS_Status()
@@ -16,6 +16,7 @@ namespace Json_Use.Models.DFS
             IN_DATA_Class in_data = new IN_DATA_Class();
             refDS = in_data;
         }
+
     }
 
 

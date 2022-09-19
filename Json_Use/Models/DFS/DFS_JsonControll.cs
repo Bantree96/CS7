@@ -56,15 +56,15 @@ namespace Json_Use.Models
         public void CreateStateJson()
         {
             // Json string 만들기
-            object p = new DFS_Status();
-            string jsonString = JsonConvert.SerializeObject(p);
-            //Console.WriteLine(jsonString);
+            //object p = new DFS_Status();
+            //string jsonString = JsonConvert.SerializeObject(p);
+            ////Console.WriteLine(jsonString);
 
-            File.WriteAllText(@"D:\test.json", jsonString);
+            //File.WriteAllText(@"D:\test.json", jsonString);
 
             // Json string으로부터 Object 가져오기
-            p = JsonConvert.DeserializeObject<object>(File.ReadAllText(@"D:\test.json"));
-            Console.WriteLine(p);
+            DFS_Status s = JsonConvert.DeserializeObject<DFS_Status>(File.ReadAllText(@"D:\test.json"));
+            Console.WriteLine(s);
         }
 
         #endregion

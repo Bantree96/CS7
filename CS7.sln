@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Double_Round", "Double_Roun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumDescription", "EnumDescription\EnumDescription.csproj", "{49D6CFA1-C237-4B14-9206-9CC35F71C08E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sqlite3_Study", "Sqlite3_Study\Sqlite3_Study.csproj", "{002BB990-6B5F-4E65-A2F4-27516618CFB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,14 @@ Global
 		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Release|x64.ActiveCfg = Release|Any CPU
 		{49D6CFA1-C237-4B14-9206-9CC35F71C08E}.Release|x64.Build.0 = Release|Any CPU
+		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Debug|x64.Build.0 = Debug|Any CPU
+		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Release|x64.ActiveCfg = Release|Any CPU
+		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
