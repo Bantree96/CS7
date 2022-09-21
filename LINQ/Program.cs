@@ -8,7 +8,39 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            List<Person> people = new List<Person>
+            double d = 0.1;
+            float f = 0.1f;
+            if (d == f)
+            {
+
+            }
+            else
+            {
+
+            }
+
+            
+            List<int> array3 = new List<int>() { 1, 3, 4, 5, 6 };
+            List<int> array4 = new List<int>() { 1, 2, 4, 7, 3, 6 };
+            // array1에 array2가 포함되는지
+
+             
+            array3.Sort();
+            array4.Sort();
+            int count = 0;
+            foreach (var item in array4)
+            {
+                if (array3.Contains(item))
+                {
+                    count++;
+                }
+            }
+            if (array3.Count == count)
+            {
+
+            }
+
+            List < Person > people = new List<Person>
             {
                 new Person {Name="Tom", Age=63, Address="Korea"},
                 new Person { Name = "Winnie", Age = 40, Address = "Tibet" },
