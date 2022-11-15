@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bitmap", "Bitmap", "{37E633
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{C1C14D67-55E7-48DF-B0C6-515850A50AA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String_Trim", "String_Trim\String_Trim.csproj", "{3915F126-866B-4BF4-812C-3CAC08A5A92E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -187,6 +189,14 @@ Global
 		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Release|x64.ActiveCfg = Release|Any CPU
 		{002BB990-6B5F-4E65-A2F4-27516618CFB0}.Release|x64.Build.0 = Release|Any CPU
+		{3915F126-866B-4BF4-812C-3CAC08A5A92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3915F126-866B-4BF4-812C-3CAC08A5A92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3915F126-866B-4BF4-812C-3CAC08A5A92E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3915F126-866B-4BF4-812C-3CAC08A5A92E}.Debug|x64.Build.0 = Debug|Any CPU
+		{3915F126-866B-4BF4-812C-3CAC08A5A92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3915F126-866B-4BF4-812C-3CAC08A5A92E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3915F126-866B-4BF4-812C-3CAC08A5A92E}.Release|x64.ActiveCfg = Release|Any CPU
+		{3915F126-866B-4BF4-812C-3CAC08A5A92E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
