@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{0AC9C27B-9110-44F1-B588-404D66376692}"
 EndProject
@@ -46,6 +46,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String_Trim", "String_Trim\String_Trim.csproj", "{3915F126-866B-4BF4-812C-3CAC08A5A92E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShallowCopy", "ShallowCopy\ShallowCopy.csproj", "{C25A4462-DAE0-4C54-B5B1-0A9F0162C915}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Asynchronous", "Asynchronous", "{F0D7F811-DC3B-4AC7-A15F-6740FBFAFAC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAP_Study", "TAP_Study\TAP_Study.csproj", "{3466717D-18D4-4A7D-B597-325A5822EF39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +211,14 @@ Global
 		{C25A4462-DAE0-4C54-B5B1-0A9F0162C915}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C25A4462-DAE0-4C54-B5B1-0A9F0162C915}.Release|x64.ActiveCfg = Release|Any CPU
 		{C25A4462-DAE0-4C54-B5B1-0A9F0162C915}.Release|x64.Build.0 = Release|Any CPU
+		{3466717D-18D4-4A7D-B597-325A5822EF39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3466717D-18D4-4A7D-B597-325A5822EF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3466717D-18D4-4A7D-B597-325A5822EF39}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3466717D-18D4-4A7D-B597-325A5822EF39}.Debug|x64.Build.0 = Debug|Any CPU
+		{3466717D-18D4-4A7D-B597-325A5822EF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3466717D-18D4-4A7D-B597-325A5822EF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3466717D-18D4-4A7D-B597-325A5822EF39}.Release|x64.ActiveCfg = Release|Any CPU
+		{3466717D-18D4-4A7D-B597-325A5822EF39}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -221,6 +233,7 @@ Global
 		{EF1C39B4-D14B-4533-BB4B-96F630703C1E} = {C1C14D67-55E7-48DF-B0C6-515850A50AA6}
 		{24B4EA11-5B23-467B-9D09-BC637C3ED375} = {37E6337A-554A-4486-8902-1C5AACBA09E4}
 		{002BB990-6B5F-4E65-A2F4-27516618CFB0} = {C1C14D67-55E7-48DF-B0C6-515850A50AA6}
+		{3466717D-18D4-4A7D-B597-325A5822EF39} = {F0D7F811-DC3B-4AC7-A15F-6740FBFAFAC6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11DDDA92-0771-4A6A-9FC8-038A97BE998C}
