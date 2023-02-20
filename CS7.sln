@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32802.440
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{0AC9C27B-9110-44F1-B588-404D66376692}"
 EndProject
@@ -60,6 +60,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CS_inDepth", "CS_inDepth", "{B1CD2320-D898-455D-BF18-C854AA0F8BA4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariableCapture", "VariableCapture\VariableCapture.csproj", "{BA6A8D83-B337-4FD8-828D-C64A6A093694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTree", "ExpressionTree\ExpressionTree.csproj", "{8A377E35-8952-4168-800D-113850480C85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -261,6 +263,14 @@ Global
 		{BA6A8D83-B337-4FD8-828D-C64A6A093694}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BA6A8D83-B337-4FD8-828D-C64A6A093694}.Release|x64.ActiveCfg = Release|Any CPU
 		{BA6A8D83-B337-4FD8-828D-C64A6A093694}.Release|x64.Build.0 = Release|Any CPU
+		{8A377E35-8952-4168-800D-113850480C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A377E35-8952-4168-800D-113850480C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A377E35-8952-4168-800D-113850480C85}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8A377E35-8952-4168-800D-113850480C85}.Debug|x64.Build.0 = Debug|Any CPU
+		{8A377E35-8952-4168-800D-113850480C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A377E35-8952-4168-800D-113850480C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A377E35-8952-4168-800D-113850480C85}.Release|x64.ActiveCfg = Release|Any CPU
+		{8A377E35-8952-4168-800D-113850480C85}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -280,6 +290,7 @@ Global
 		{FEDC764D-D2A9-4AC2-8826-D672A4120065} = {F0D7F811-DC3B-4AC7-A15F-6740FBFAFAC6}
 		{DFBC0C64-0332-4079-B006-D042D13AB022} = {F0D7F811-DC3B-4AC7-A15F-6740FBFAFAC6}
 		{BA6A8D83-B337-4FD8-828D-C64A6A093694} = {B1CD2320-D898-455D-BF18-C854AA0F8BA4}
+		{8A377E35-8952-4168-800D-113850480C85} = {B1CD2320-D898-455D-BF18-C854AA0F8BA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11DDDA92-0771-4A6A-9FC8-038A97BE998C}
