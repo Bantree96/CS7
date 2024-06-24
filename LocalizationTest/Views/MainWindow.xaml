@@ -15,8 +15,9 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+		<!--
         <TextBlock Grid.Row="0" Text="{Binding [MainText], Source={StaticResource DR}}"/>
-        <TextBlock Grid.Row="2" Text="{Binding [Title], Source={StaticResource DR}}"/>
+        <TextBlock Grid.Row="2" Text="{Binding [Title], Source={StaticResource DR}}"/>-->
         <StackPanel Grid.Row="1">
             <Button Content="Eng" Command="{Binding LanguageChangeCommand}" CommandParameter="en-US"></Button>
             <Button Content="한글" Command="{Binding LanguageChangeCommand}" CommandParameter="ko-KR"></Button>
