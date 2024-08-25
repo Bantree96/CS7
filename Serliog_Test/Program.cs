@@ -23,7 +23,7 @@ namespace Serliog_Test
                //.Enrich.WithThreadName()
 
                // 파일에 로그 출력
-               .WriteTo.File(@"logs\log-.txt",
+               .WriteTo.File(@"logs\{Date:YYYY}_{Date:MM}_{Date:DD}_SystemLog.txt",
                     // [시간][레벨][쓰레드명][메세지][\n][예외]
                     outputTemplate: "[{Timestamp:yyyy-MM-dd_HH:mm:ss:fff}] [{Level:u3}] <{ThreadName}> {Message:l}{NewLine} {Exception}",
                     rollingInterval: RollingInterval.Day,

@@ -1,0 +1,26 @@
+﻿<Window x:Class="LocalizationTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LocalizationTest.Services"
+        mc:Ignorable="d"
+        Height="450" Width="800" Title="{Binding Title}">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+		<!--
+        <TextBlock Grid.Row="0" Text="{Binding [MainText], Source={StaticResource DR}}"/>
+        <TextBlock Grid.Row="2" Text="{Binding [Title], Source={StaticResource DR}}"/>-->
+        <StackPanel Grid.Row="1">
+            <Button Content="Eng" Command="{Binding LanguageChangeCommand}" CommandParameter="en-US"></Button>
+            <Button Content="한글" Command="{Binding LanguageChangeCommand}" CommandParameter="ko-KR"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
