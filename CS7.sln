@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32802.440
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{0AC9C27B-9110-44F1-B588-404D66376692}"
 EndProject
@@ -78,6 +78,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4net_Study", "Log4net_Study\Log4net_Study.csproj", "{22AC2DDE-0ECC-4AC0-B3EA-E16AE70B4622}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapAndSource", "BitmapAndSource\BitmapAndSource.csproj", "{52686E73-3065-4753-98B3-72EA0CDCED27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "기본공부", "기본공부", "{7A5BD019-69EA-4B8C-B6E1-E8ADB738882D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethod", "ExtensionMethod\ExtensionMethod.csproj", "{0F7120B2-684E-465F-9FB9-DEB8766701FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -327,6 +331,14 @@ Global
 		{52686E73-3065-4753-98B3-72EA0CDCED27}.Release|Any CPU.Build.0 = Release|Any CPU
 		{52686E73-3065-4753-98B3-72EA0CDCED27}.Release|x64.ActiveCfg = Release|Any CPU
 		{52686E73-3065-4753-98B3-72EA0CDCED27}.Release|x64.Build.0 = Release|Any CPU
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE}.Debug|x64.Build.0 = Debug|Any CPU
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE}.Release|x64.ActiveCfg = Release|Any CPU
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -353,6 +365,7 @@ Global
 		{C4F583C2-C312-49FB-AD86-7D16C58B0D92} = {E8529CEC-4053-4DB2-8986-79DEBB032E04}
 		{22AC2DDE-0ECC-4AC0-B3EA-E16AE70B4622} = {B98DC778-DD90-4302-A7E0-06DB6EAC3903}
 		{52686E73-3065-4753-98B3-72EA0CDCED27} = {37E6337A-554A-4486-8902-1C5AACBA09E4}
+		{0F7120B2-684E-465F-9FB9-DEB8766701FE} = {7A5BD019-69EA-4B8C-B6E1-E8ADB738882D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11DDDA92-0771-4A6A-9FC8-038A97BE998C}
