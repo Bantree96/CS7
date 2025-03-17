@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.6.33815.320
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34729.46
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{0AC9C27B-9110-44F1-B588-404D66376692}"
 EndProject
@@ -96,6 +96,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSV", "CSV", "{1B689D70-EA7A-490A-8ED3-CDDA21AAE6C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvParser", "CsvParser\CsvParser.csproj", "{711A4E30-1AEB-4B44-AB8B-CEBC35E1024E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitmap_Memory", "Bitmap_Memory\Bitmap_Memory.csproj", "{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -382,6 +384,14 @@ Global
 		{711A4E30-1AEB-4B44-AB8B-CEBC35E1024E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{711A4E30-1AEB-4B44-AB8B-CEBC35E1024E}.Release|x64.ActiveCfg = Release|Any CPU
 		{711A4E30-1AEB-4B44-AB8B-CEBC35E1024E}.Release|x64.Build.0 = Release|Any CPU
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}.Debug|x64.Build.0 = Debug|Any CPU
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}.Release|x64.ActiveCfg = Release|Any CPU
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -415,6 +425,7 @@ Global
 		{19241B9F-946E-4138-AF90-CC5D758E7AA4} = {C1C14D67-55E7-48DF-B0C6-515850A50AA6}
 		{9DE2F8F1-D555-4D0E-8F26-75F11C8AB9F0} = {19241B9F-946E-4138-AF90-CC5D758E7AA4}
 		{711A4E30-1AEB-4B44-AB8B-CEBC35E1024E} = {1B689D70-EA7A-490A-8ED3-CDDA21AAE6C8}
+		{4CBC1BF7-4A9B-49D4-BB2D-92DCD6CF8F2E} = {37E6337A-554A-4486-8902-1C5AACBA09E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11DDDA92-0771-4A6A-9FC8-038A97BE998C}
