@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,14 +13,15 @@ using System.Windows.Media.Imaging;
 
 namespace Bitmap_Memory.ViewModels
 {
-	public class MainWindowViewModel
+	public class MainWindowViewModel : NotifyBase
 	{
+		private BitmapImage _image;
 		public string Title { get; set; } = "Bitmap Memory";
-		public BitmapImage Image { get; set; }
+		public BitmapImage Image { get => _image; set => SetProperty(ref _image, value); }
 		public MainWindowViewModel()
 		{
-			BitmapTest();
 		}
+
 
 		public void BitmapTest()
 		{
@@ -40,6 +43,8 @@ namespace Bitmap_Memory.ViewModels
 				var bmp = ByteToBitmap(imageArray, bitmap.Width, bitmap.Height);
 
 				Image = Bitmap2BitmapImage(bmp);
+
+				Marshal.FreeHGlobal(ptr);
 			}
 		}
 
@@ -119,6 +124,25 @@ namespace Bitmap_Memory.ViewModels
 			bmp.UnlockBits(bmpData);
 
 			return bmp;
+		}
+	}
+
+	public abstract class NotifyBase : INotifyPropertyChanged
+	{
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		protected virtual void OnPropertyChaned([CallerMemberName] string propertyName = null)
+		{
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		}
+
+		protected virtual void SetProperty<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
+		{
+			if (!Equals(field, value))
+			{
+				field = value;
+				OnPropertyChaned(propertyName);
+			}
 		}
 	}
 }

@@ -21,12 +21,18 @@ namespace Bitmap_Memory
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		private MainWindowViewModel _viewModel;
 		public MainWindow(MainWindowViewModel viewModel)
 		{
 			InitializeComponent();
-
+			_viewModel = viewModel;
 			DataContext = viewModel;
 
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			_viewModel.BitmapTest();
 		}
 	}
 }
