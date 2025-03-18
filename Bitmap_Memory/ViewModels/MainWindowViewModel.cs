@@ -88,15 +88,25 @@ namespace Bitmap_Memory.ViewModels
 			var image = new WriteableBitmap(width, height, 96, 96, PixelFormats.Indexed8, BitmapPalettes.Gray256);
 			byte[] newArray = new byte[length];
 
+			// WriteableBitmap을 작업하기 위한 메모리 Lock
 			image.Lock();
+
+			// Point간 Copy기능이 없어 Ptr을 Array로 Copy
 			Marshal.Copy(ptr, newArray, 0, newArray.Length);
+
+			// Array를 image의 BackBuffer로 Copy 
+			// 백 버퍼에 변경 내용을 작성한다.
 			Marshal.Copy(newArray, 0, image.BackBuffer, newArray.Length);
-			
-			image.AddDirtyRect(new Int32Rect(0, 0, width, height)); // 이게 UI에게 알려줌
+
+			// 이게 UI에게 알려줌
+			// 변경된 영역을 나타낸다.
+			image.AddDirtyRect(new Int32Rect(0, 0, width, height)); 
+
+			// WriteableBitmap작업 마치고 메모리 Unlock
+			// 백 버퍼를 해제하고 화면에 프레젠테이션을 허용한다.
 			image.Unlock();
 			return image;
 		}
-
 	}
 
 	public abstract class NotifyBase : INotifyPropertyChanged
