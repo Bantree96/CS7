@@ -11,7 +11,7 @@
 			<RowDefinition/>
 			<RowDefinition/>
 		</Grid.RowDefinitions>
-		<Button Content="Button" Click="Button_Click"/>
-		<Image Source="{Binding Image}"/>
+		<Button Grid.Row="0" Content="Button" Click="Button_Click"/>
+		<Image Grid.Row="1" Source="{Binding Image}"/>
 	</Grid>
 </Window>

@@ -1,25 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace Bitmap_Memory.ViewModels
 {
 	public class MainWindowViewModel : NotifyBase
 	{
-		private BitmapImage _image;
+		private WriteableBitmap _image;
+		private Thread _imageThread;
 		public string Title { get; set; } = "Bitmap Memory";
-		public BitmapImage Image { get => _image; set => SetProperty(ref _image, value); }
+		public WriteableBitmap Image { get => _image; set => SetProperty(ref _image, value); }
 		public MainWindowViewModel()
 		{
+			_imageThread = new Thread(BitmapTest);
+
+		}
+
+		public void Run()
+		{
+			_imageThread.Start();
 		}
 
 
@@ -29,6 +35,9 @@ namespace Bitmap_Memory.ViewModels
 
 			while (true)
 			{
+				Thread.Sleep(1000);
+
+				// Bitmap To Byte
 				byte[] array = ConvertBitmapToByteArray(bitmap);
 				byte[] imageArray = new byte[array.Length];
 
@@ -38,39 +47,14 @@ namespace Bitmap_Memory.ViewModels
 
 				Marshal.Copy(array, 0, ptr, array.Length);
 
-				Marshal.Copy(ptr, imageArray, 0, array.Length);
 
-				var bmp = ByteToBitmap(imageArray, bitmap.Width, bitmap.Height);
-
-				Image = Bitmap2BitmapImage(bmp);
+				Application.Current.Dispatcher.Invoke(() =>
+				{
+					var image = IntPtrToWriteableBitmap(ptr, bitmap.Width, bitmap.Height, array.Length);
+					Image = image;
+				});
 
 				Marshal.FreeHGlobal(ptr);
-			}
-		}
-
-		/// <summary>
-		/// Bitmap을 BitmapImage로 변환합니다.
-		/// </summary>
-		/// <param name="bitmap"></param>
-		/// <returns></returns>
-		public static BitmapImage Bitmap2BitmapImage(Bitmap bitmap)
-		{
-			// 새 비트맵 이미지 객체 생성
-			BitmapImage bitmapimage = new BitmapImage();
-			// 메모리 스트림을 사용한다.
-			using (MemoryStream stream = new MemoryStream())
-			{
-
-				bitmap.Save(stream, ImageFormat.Bmp);                   // 메모리 스트림에 bitmap을 Bmp로 저장한다.
-				stream.Position = 0;                                    // 스트림 포지션 0으로 설정해 처음부터 잡는다.
-				bitmapimage.BeginInit();                                // 비트맵 이미지 초기화
-				bitmapimage.CacheOption = BitmapCacheOption.OnLoad;     // 비트맵 캐시옵셥 : 이미지가 다 생성되야 stream 닫게설정
-				bitmapimage.StreamSource = stream;                      // 스트림소스에 스트림 내용을 집어 넣는다.
-				bitmapimage.EndInit();                                  // 비트맵 이미지 초기화 종료
-				bitmapimage.Freeze();                                   // 이미지 변경을 더 이상 하지 않는다고 선언(바인딩 권한 위해 필수)
-				bitmap.Dispose();                                       // 필요 없으면 Dispose해
-
-				return bitmapimage;
 			}
 		}
 
@@ -98,33 +82,21 @@ namespace Bitmap_Memory.ViewModels
 			return byteArray;
 		}
 
-		/// <summary>
-		/// Byte배열을 Bitmap으로 변환합니다.
-		/// </summary>
-		/// <param name="data"></param>
-		/// <param name="width"></param>
-		/// <param name="height"></param>
-		/// <returns></returns>
-		public static Bitmap ByteToBitmap(byte[] data, int width, int height)
+
+		public WriteableBitmap IntPtrToWriteableBitmap(IntPtr ptr, int width, int height, int length)
 		{
-			// 여기에서 높이, 너비 및 형식을 알고있는 비트 맵을 만듭니다. 
-			Bitmap bmp = new Bitmap(width, height, PixelFormat.Format8bppIndexed);
+			var image = new WriteableBitmap(width, height, 96, 96, PixelFormats.Indexed8, BitmapPalettes.Gray256);
+			byte[] newArray = new byte[length];
 
-			// BitmapData 생성 및 기록 될 모든 픽셀을 GC가 수집할 수 없도록 잠금 
-			BitmapData bmpData = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.WriteOnly, bmp.PixelFormat);
-
-			// 포인트 사용한다고 정의 하며 마샬 메모리 등록
-			IntPtr unmanagedPointer = Marshal.AllocHGlobal(data.Length);
-
-			// 바이트 배열의 데이터를 BitmapData로 복사합니다.
-			Marshal.Copy(data, 0, bmpData.Scan0, data.Length);
-			// 마샬 메모리 해제
-			Marshal.FreeHGlobal(unmanagedPointer);
-			// 픽셀 잠금 해제 
-			bmp.UnlockBits(bmpData);
-
-			return bmp;
+			image.Lock();
+			Marshal.Copy(ptr, newArray, 0, newArray.Length);
+			Marshal.Copy(newArray, 0, image.BackBuffer, newArray.Length);
+			
+			image.AddDirtyRect(new Int32Rect(0, 0, width, height)); // 이게 UI에게 알려줌
+			image.Unlock();
+			return image;
 		}
+
 	}
 
 	public abstract class NotifyBase : INotifyPropertyChanged
@@ -145,4 +117,6 @@ namespace Bitmap_Memory.ViewModels
 			}
 		}
 	}
+
+
 }
